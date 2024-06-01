@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../../globals.css";
 import StoreProvider from "@/StoreProvider";
-import {
-  NotificationContext,
-  NotificationProvider,
-} from "./context/NotificationProvider";
-import { useContext } from "react";
+import TaskContextProvider from "@/app/context/TaskContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <StoreProvider>
-        <body className={inter.className}>
-          <NotificationProvider>{children}</NotificationProvider>
-        </body>
-      </StoreProvider>
-    </html>
+    <TaskContextProvider>
+      <div className={inter.className}>{children}</div>
+    </TaskContextProvider>
   );
 }
