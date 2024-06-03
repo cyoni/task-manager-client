@@ -12,7 +12,10 @@ export function getTaskType(type: string) {
 
     case E_TaskCode.IN_PROGRESS:
       return E_TaskTypeToCode[E_TaskCode.IN_PROGRESS];
+
+    case E_TaskCode.CANCELED:
+      return E_TaskTypeToCode[E_TaskCode.CANCELED];
     default:
-      return "erorr";
+      return "error";
   }
 }

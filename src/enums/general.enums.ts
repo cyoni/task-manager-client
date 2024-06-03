@@ -11,10 +11,10 @@ export const E_PriorityCodeToWord = {
 };
 
 export const E_TaskStatus = {
-  ToDo: 0,
-  InProgress: 1,
-  Done: 2,
-  Cancelled: 3,
+  ToDo: 1,
+  InProgress: 2,
+  Done: 3,
+  Cancelled: 4,
 };
 
 export const E_TaskCode = {
@@ -22,6 +22,7 @@ export const E_TaskCode = {
   TO_DO: "to-do",
   COMPLETED: "completed",
   IN_PROGRESS: "in-progress",
+  CANCELED: "canceled",
 };
 
 export const E_TaskTypeToCode = {
@@ -29,4 +30,5 @@ export const E_TaskTypeToCode = {
   "to-do": 1,
   completed: 2,
   "in-progress": 3,
+  "canceled": 4,
 };

@@ -1,12 +1,13 @@
-import { Button, Input } from "antd";
+import { Button } from "antd";
 import React, { useState } from "react";
 import NewTaskModal from "./NewTaskModal";
-import { BASE_URL } from "@/consts/general.consts";
 import { CiSearch } from "react-icons/ci";
 import { useDispatch } from "react-redux";
 import { UPDATE_SEARCH_TEXT } from "@/consts/general.consts";
+import SiteDrawer from "./SiteDrawer";
+import MobileHeader from "./MobileHeader";
 
-function Header({ fetchTasks }) {
+function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -17,9 +18,10 @@ function Header({ fetchTasks }) {
 
   return (
     <>
-      <div className="flex justify-between items-center mb-2 pr-4">
+      <SiteDrawer />
+      <div className="md:flex justify-between items-center mb-2 pr-4 hidden">
         <div className="text-3xl pl-2">
-          <div className="w-64 px-4 gap-2 2xl:w-[400px] placeholder:text-gray-500 text-gray-800 py-2  bg-[#f3f4f6] rounded-full flex items-center">
+          <div className="w-64 px-4 gap-2 lg:w-[400px] md:w-[350px] placeholder:text-gray-500 text-gray-800 py-2  bg-[#f3f4f6] rounded-full flex items-center">
             <CiSearch className="text-gray-500 text-[20px]" />
             <input
               type="text"
@@ -40,10 +42,12 @@ function Header({ fetchTasks }) {
           </div>
         </div>
       </div>
+
+      <MobileHeader />
+
       {isModalOpen && (
         <NewTaskModal
           isModalOpen={isModalOpen}
-          fetchTasks={fetchTasks}
           onClose={() => setIsModalOpen(false)}
         />
       )}
