@@ -1,14 +1,16 @@
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 
 interface IProps {
   title: string;
   href: string;
   icon: JSX.Element;
-  action: string;
   pageKey: string;
 }
-function SideMenuLink({ title, href, action, icon, pageKey }: IProps) {
+function SideMenuLink({ title, href, icon, pageKey }: IProps) {
+  const { action } = useParams();
+
   return (
     <Link
       href={href}
@@ -21,7 +23,9 @@ function SideMenuLink({ title, href, action, icon, pageKey }: IProps) {
     >
       <span className="flex gap-4 items-center md:justify-start justify-center ">
         <span className="text-xl">{icon}</span>
-        <span className="hidden md:block text-sm lg:text-md xl:text-lg">{title}</span>
+        <span className="hidden md:block text-sm lg:text-md xl:text-lg">
+          {title}
+        </span>
       </span>
     </Link>
   );

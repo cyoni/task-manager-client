@@ -4,7 +4,7 @@ import { Button, Dropdown, Space, Tooltip } from "antd";
 import { DiAptana } from "react-icons/di";
 import DeleteTaskModal from "./DeleteTaskModal";
 import NewTaskModal from "./NewTaskModal";
-import { TaskContext } from "@/app/context/TaskContextProvider";
+import { TaskContext } from "@/context/TaskContextProvider";
 
 interface IProps {
   id: number;

@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import StoreProvider from "@/StoreProvider";
-import {
-  NotificationContext,
-  NotificationProvider,
-} from "./context/NotificationProvider";
-import { useContext } from "react";
+import { NotificationProvider } from "../context/NotificationProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 

@@ -29,7 +29,7 @@ function Page() {
     <div className="min-h-screen md:p-2 ">
       <div className="flex flex-row h-full">
         <div className="xl:w-[250px] lg:w-[200px] md:block hidden">
-          <SideMenu action={action} />
+          <SideMenu />
         </div>
         <div className="flex-1">
           <Header />

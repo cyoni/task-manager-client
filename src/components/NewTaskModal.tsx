@@ -1,5 +1,5 @@
 import { fetchTasks } from "@/actions/tasks.actions";
-import { NotificationContext } from "@/app/context/NotificationProvider";
+import { NotificationContext } from "@/context/NotificationProvider";
 import { BASE_URL } from "@/consts/general.consts";
 import { E_Priority, E_TaskStatus } from "@/enums/general.enums";
 import { taskByIdSelector } from "@/selectors/tasks.selector";

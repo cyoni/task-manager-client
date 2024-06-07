@@ -1,5 +1,5 @@
 import { DELETE_TASK, UPDATE_TASK } from "@/consts/general.consts";
-import { NotificationContext } from "@/app/context/NotificationProvider";
+import { NotificationContext } from "@/context/NotificationProvider";
 import { BASE_URL } from "@/consts/general.consts";
 import { useContext } from "react";
 import { useDispatch } from "react-redux";
